@@ -3,17 +3,14 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Annotation\Route;
+use App\Service\Greeter;
 use Symfony\Component\HttpFoundation\Response;
 
 class HelloController extends AbstractController
 {
-
-
-    function hello($param)
+    function hello(Greeter $greeter)
     {
-        $title = 'uti';
-        $users = ["tondaye"];
-        return $this->render('hello.html.twig', ['title' => $title, 'array' => $users]);
+        $message = $greeter->greet();
+        return new Response($message);
     }
 };

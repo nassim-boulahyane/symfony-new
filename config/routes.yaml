@@ -1,5 +1,5 @@
 
 index: 
-  path: /createUserForm
-  controller: App\Controller\UserController::createUserForm 
+  path: /hello
+  controller: App\Controller\HelloController::hello 
 
