@@ -1,5 +1,5 @@
-controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+
+index: 
+  path: /createUserForm
+  controller: App\Controller\UserController::createUserForm 
+
